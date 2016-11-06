@@ -2,7 +2,7 @@
   "name": "tack-css",
   "version": "0.1.1",
   "description": "On the fly pseudo-class generation for functional CSS.",
-  "homepage": "",
+  "homepage": "https://github.com/dooly-ai/tack",
   "author": {
     "name": "Justin Vaillancourt",
     "email": "justin@dooly.ai",
