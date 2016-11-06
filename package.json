@@ -2,13 +2,6 @@
   "name": "tack-css",
   "version": "0.1.1",
   "description": "On the fly pseudo-class generation for functional CSS.",
-  "homepage": "https://github.com/dooly-ai/tack",
-  "author": {
-    "name": "Justin Vaillancourt",
-    "email": "justin@dooly.ai",
-    "url": ""
-  },
-  "main": "index.js",
   "keywords": [
     "react",
     "css",
@@ -17,6 +10,13 @@
     "util",
     "utility"
   ],
-  "repository": "dooly-ai/tack",
-  "license": "MIT"
+  "homepage": "https://github.com/dooly-ai/tack",
+  "license": "MIT",
+  "author": {
+    "name": "Justin Vaillancourt",
+    "email": "justin@dooly.ai",
+    "url": ""
+  },
+  "main": "index.js",
+  "repository": "dooly-ai/tack"
 }
