@@ -30,15 +30,15 @@ After your functional styles are loaded, call `tack.hash` to seed the style inde
 tack.hash();
 ```
 
-The `tack` function takes a pseudo-class and a list of CSS classes, and returns a list of generated
-classes that target the pseudo-class.
+The `tack` function takes a pseudo-class and a list of CSS classes and returns a list of generated
+classes with the pseudo-class targeted.
 
 
 ```javascript
 tack('hover', 'b--blue', 'blue') // => 'b--blue--tack-hover blue--tack-hover'
 ```
 
-The permutations of pseudo-class and classes are generated and added to the DOM the first time
+The permutations of pseudo-class with classes are generated and added to the DOM the first time
 `tack` sees them. They are re-used afterwards.
 
 
