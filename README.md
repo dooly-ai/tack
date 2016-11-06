@@ -4,9 +4,41 @@
 
 On the fly pseudo-class generation for functional CSS.
 
-This package allows you to generate pseudo-class variations of functional CSS classes at runtime.
-When used with [Tachyons](http://tachyons.io/) or [Basscss](http://basscss.com/), it entirely
-alleviates the need to use pseudo-class specific selectors.
+This package allows you to generate pseudo-class variations of CSS classes at runtime. When used
+with [Tachyons](http://tachyons.io/) or [Basscss](http://basscss.com/), it entirely alleviates
+the need for pseudo-class specific selectors.
+
+
+## Installation
+
+```sh
+$ npm install --save tack-css
+```
+
+
+## Usage
+
+First, import `tack`:
+
+```javascript
+import tack from 'tack-css';
+```
+
+After your functional styles are loaded, call `tack.hash` to seed the style index:
+
+```javascript
+tack.hash();
+```
+
+The `tack` function takes a pseudo-class and a list of CSS classes and returns a list of generated
+CSS classes that target the pseudo-class.
+
+```javascript
+tack('hover', 'b--blue', 'blue') // => 'b--blue--tack-hover blue--tack-hover'
+```
+
+The specific permutation of pseudo-class and CSS classes are generated and added to the DOM the
+first time `tack` sees them. They are re-used afterwards.
 
 
 ## License

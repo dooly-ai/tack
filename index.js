@@ -1,8 +1,6 @@
 (function() {
   'use strict';
 
-  var Tack = {};
-
   var indexedStyles = {};
 
   var _sheet = null;
@@ -37,23 +35,7 @@
     return _sheet;
   }
 
-  Tack.hash = function() {
-    indexedStyles = {};
-
-    Array.prototype.forEach.call(document.styleSheets, function(styleSheet) {
-      Array.prototype.forEach.call(styleSheet.cssRules || [], function(cssRule) {
-        const selectorText = cssRule.selectorText;
-
-        if (!selectorText || !isClassSelector(selectorText)) {
-          return;
-        }
-
-        indexedStyles[selectorText] = cssRule;
-      });
-    });
-  }
-
-  Tack.tack = function(pseudoClass) {
+  var Tack = function(pseudoClass) {
     const classes = [].splice.call(arguments, 1);
     return classes
       .map(className => {
@@ -90,6 +72,22 @@
       })
       .filter(tackClassName => !!tackClassName)
       .join(' ');
+  }
+
+  Tack.hash = function() {
+    indexedStyles = {};
+
+    Array.prototype.forEach.call(document.styleSheets, function(styleSheet) {
+      Array.prototype.forEach.call(styleSheet.cssRules || [], function(cssRule) {
+        const selectorText = cssRule.selectorText;
+
+        if (!selectorText || !isClassSelector(selectorText)) {
+          return;
+        }
+
+        indexedStyles[selectorText] = cssRule;
+      });
+    });
   }
 
   if (typeof module !== 'undefined' && module.exports) {

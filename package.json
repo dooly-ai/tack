@@ -1,6 +1,6 @@
 {
   "name": "tack-css",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "On the fly pseudo-class generation for functional CSS.",
   "homepage": "",
   "author": {
