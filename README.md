@@ -52,7 +52,7 @@ domain or have appropriate CORS headers set.
 ## How does it work?
 
 `tack.hash()` builds an index of simple CSS selectors to rules. Then, `tack` uses the index to
-generate derivative classes that are injected into the document.
+generate derivative classes that are injected into the document at runtime.
 
 
 ## License
