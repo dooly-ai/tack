@@ -45,8 +45,14 @@ The permutations of pseudo-class and classes are generated and added to the DOM 
 ## Limitations
 
 Because `tack` uses the `Document.styleSheets` API to index styles, the style sheets with the
-classes you wish to augment must adhere to the browser's same-origin policy and reside on page's
+classes you wish to augment must adhere to the browser's same-origin policy and reside on the page's
 domain or have appropriate CORS headers set.
+
+
+## How does it work?
+
+`tack.hash()` builds an index of simple CSS selectors to rules. Then, `tack` uses the index to
+generate derivative classes that are injected into the document.
 
 
 ## License
