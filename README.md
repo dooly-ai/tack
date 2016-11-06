@@ -38,7 +38,7 @@ classes that target the pseudo-class.
 tack('hover', 'b--blue', 'blue') // => 'b--blue--tack-hover blue--tack-hover'
 ```
 
-The permutations of pseudo-class and classes are generated and added to the DOM the first time
+The permutations of pseudo-class with classes are generated and added to the DOM the first time
 `tack` sees them. They are re-used afterwards.
 
 
