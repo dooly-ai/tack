@@ -30,16 +30,23 @@ After your functional styles are loaded, call `tack.hash` to seed the style inde
 tack.hash();
 ```
 
-The `tack` function takes a pseudo-class and a list of CSS classes and returns a list of generated
-CSS classes with the pseudo-class targeted.
+The `tack` function takes a pseudo-class and a list of classes and returns a list of generated
+classes with the pseudo-class targeted.
 
 
 ```javascript
 tack('hover', 'b--blue', 'blue') // => 'b--blue--tack-hover blue--tack-hover'
 ```
 
-The permutations of pseudo-class and CSS classes are generated and added to the DOM the first time
+The permutations of pseudo-class and classes are generated and added to the DOM the first time
 `tack` sees them. They are re-used afterwards.
+
+
+## Limitations
+
+Because `tack` uses the `Document.styleSheets` API to index styles, the style sheets with the
+classes you wish to augment must adhere to the browser's same-origin policy and reside on page's
+domain or have appropriate CORS headers set.
 
 
 ## License
