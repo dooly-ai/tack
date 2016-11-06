@@ -31,7 +31,7 @@ tack.hash();
 ```
 
 The `tack` function takes a pseudo-class and a list of classes and returns a list of generated
-classes that target the pseudo-class.
+classes.
 
 
 ```javascript
