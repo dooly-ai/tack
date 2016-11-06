@@ -8,9 +8,6 @@
     "email": "justin@dooly.ai",
     "url": ""
   },
-  "files": [
-    "dist"
-  ],
   "main": "index.js",
   "keywords": [
     "react",
